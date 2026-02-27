@@ -1,0 +1,40 @@
+// ===== ПРАВИЛА ПАРОЛЯ =====
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.rule {
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  &.ok {
+    color: #22c55e;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// ===== ТЕКСТ УСЛОВИЙ =====
+.terms {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-top: 8px;
+
+  span {
+    color: #3b82f6;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
