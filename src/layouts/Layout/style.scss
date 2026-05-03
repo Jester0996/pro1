@@ -1,0 +1,34 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-banner {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fafafa;
+  font-size: 14px;
+  color: #666;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+}
+
+
+.home-page {
+  h1 {
+    margin-bottom: 16px;
+  }
+}

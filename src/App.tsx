@@ -1,19 +1,35 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registration from "./components/Registration";
-import Login from "./components/Login";
+import { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import "./style.scss";
+import { RoutesController } from '@/components/RoutesController';
+import { checkInitialSession } from '@/store/auth/actions';
+import { useAppDispatch } from '@/store/hooks';
+import { store } from '@/store';
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
-  );
+import './style.scss';
+
+const AppContent = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(checkInitialSession());
+  }, [dispatch]);
+
+  return <RoutesController />;
 };
+
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
+      <AppContent />
+    </BrowserRouter>
+  </Provider>
+);
 
 export default App;

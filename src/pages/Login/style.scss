@@ -1,0 +1,30 @@
+// ===== ЗАБЫЛИ ПАРОЛЬ =====
+.forgot {
+  text-align: right;
+  font-size: 13px;
+  margin-top: -8px;
+
+  a {
+    color: #6b7280;
+    text-decoration: none;
+
+    &:hover {
+      color: #3b82f6;
+    }
+  }
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.success-message {
+  background: lightgreen;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
